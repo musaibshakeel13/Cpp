@@ -36,15 +36,3 @@ int main() {
     m.showDetails();   
     return 0;
 }
-
-
-
-.
-.
-.
-.
-
-
-
-
-  ..
