@@ -1,48 +1,34 @@
 #include <iostream>
 using namespace std;
 
-class Student
-{
-private:
-    int rollNo;
-    string name;
-
-public:
-    // Default Constructor
-    Student()
-    {
-        rollNo = 0;
-        name = "Unknown";
-    }
-
-    // Parameterized Constructor
-    Student(int r, string n)
-    {
-        rollNo = r;
-        name = n;
-    }
-
-    // Display Function
-    void display()
-    {
-        cout << "Roll No: " << rollNo << endl;
-        cout << "Name: " << name << endl;
-    }
-};
-
 int main()
 {
-    // Calls Default Constructor
-    Student s1;
+    int num;
+    bool isPrime = true;
 
-    // Calls Parameterized Constructor
-    Student s2(101, "Musaib");
+    cout << "Enter a number: ";
+    cin >> num;
 
-    cout << "Student 1:" << endl;
-    s1.display();
+    if (num <= 1)
+    {
+        isPrime = false;
+    }
+    else
+    {
+        for (int i = 2; i < num; i++)
+        {
+            if (num % i == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+    }
 
-    cout << "\nStudent 2:" << endl;
-    s2.display();
+    if (isPrime)
+        cout << num << " is a Prime Number";
+    else
+        cout << num << " is not a Prime Number";
 
     return 0;
 }
